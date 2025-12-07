@@ -1,0 +1,168 @@
+📄 VALIDATION.md
+Atliq Executive View Dashboard – Data Validation Report
+
+This document provides a complete overview of data validation checks performed before building the Atliq Executive View Dashboard. Validation ensures the dataset is clean, reliable, and analysis-ready.
+
+
+ “Business Rules Applied”
+
+Customer code must be unique
+
+Product code must be unique
+
+Sales amount cannot be negative
+
+Dates must lie between 2017–2022
+
+
+✅ 1. Row Count Validation
+
+Row count was verified for all fact and dimension tables.
+
+Table Name	Row Count
+dim_customer	209
+dim_Product	397
+dim_Market	27
+
+✔ No missing or unexpected rows found.
+✔ Row count matches the dataset specification.
+
+
+✅ 2. Key Column Validation (Master Tables)
+
+Key columns were validated using COUNTROWS vs DISTINCTCOUNT technique.
+
+dim_customer Table-
+
+Key Column: customer_code
+
+Total Rows: 209
+
+Distinct custome_code: 209
+
+Duplicates: 0
+
+Nulls: 0
+
+
+dim_Product Table-
+
+Key Column: Product_Code
+
+Total Rows: 397
+
+Distinct Product_Code: 397
+
+Duplicates: 0
+
+Nulls: 0
+
+
+dim_Market Table-
+
+Key Column: Market 
+
+Total Rows: 27
+
+Distinct Market: 27
+
+Duplicates: 0
+
+Nulls: 0
+
+
+✔ All master tables contain unique and clean key values.
+✔ No duplicate master entries found.
+
+
+✅ 3. Fact Table Validation-(fact_actualas_estimate)
+
+Repeated customer/product codes found → Expected & Valid
+
+No unmatched CustomerID/ProductID
+
+No nulls in critical fields (Date, Customer, Product, Market, Sales Amount)
+
+✔ Fact table is aligned with master tables.
+
+
+✅ 4. Date Range Validation
+
+Using MIN and MAX DAX checks:
+
+Min Date: 2017-09-01
+
+Max Date: 2022-08-31
+
+✔ Date range matches company data timeline.
+✔ No invalid future/past dates found.
+
+
+✅ 5. Null Value Validation
+
+Key columns were checked for nulls:
+
+Column Name	Null Count
+Customer_Code	0
+Product_Code	0
+Market   	0
+Date            0
+
+✔ No null values in essential analytical fields.
+
+
+✅ 6. Duplicate Check Summary
+Table	                  Duplicate Records
+dim_Customer	          0
+dim_Product               0
+dim_Market                0
+fact_actuals_estimate     Only transaction repetition (valid)
+
+✔ Dataset is fully duplicate-free where required.
+
+➕ “Tools Used”
+
+Power Query
+
+Power BI DAX
+
+Excel for quick checks
+
+
+✅ 7. Data Type Validation
+
+Dates → Proper date type
+
+Codes → Text
+
+Sales Amount → Decimal
+
+Quantity → Whole Number
+
+✔ All columns are in correct format for measures and relationships.
+
+
+✅ 8. Relationships Validation
+
+Star Schema confirmed
+
+Fact tables properly linked with dim_Customer, dim_Product, dim_Market, and dim_Date tables
+
+No circular dependencies
+
+Cross-filter direction: Single → Correct
+
+✔ Model is optimized and clean.
+
+
+🟢 Final Conclusion
+
+✔ Dataset is clean, accurate, validated, and analysis-ready.
+✔ No structural issues found.
+✔ Ideal for building an enterprise-level Power BI Dashboard.
+
+⭐ Prepared By:
+
+Atishay Jain
+Power BI Developer
+Atliq Executive View Dashboard Project
