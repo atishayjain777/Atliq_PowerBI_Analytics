@@ -165,4 +165,5 @@ Cross-filter direction: Single → Correct
 
 Atishay Jain
 Power BI Developer
-Atliq Executive View Dashboard Project
+
+Atliq_PowerBI_Analytics Project
