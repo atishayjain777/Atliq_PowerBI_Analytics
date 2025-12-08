@@ -1,0 +1,280 @@
+📄 INSIGHTS – AtliQ Business Intelligence Suite
+
+This file captures all insights from each dashboard page using FY-vs-LY performance, forecast accuracy, market behavior, P&L, and customer/product contribution.
+
+1️⃣ SUPPLY CHAIN VIEW – INSIGHTS
+
+✅ Core KPI Performance(As per FY 2022 Estimate)
+
+.Forecast Accuracy: 81.17%
+
+.Net Error: –3.47M (overall under-forecasting)
+
+.Absolute Error: 6.89M (high variability across products/customers)
+
+✅ Customer-Level Insights 
+
+ Forecast Accuracy %-
+
+.Measures how accurate the sales forecast was for each customer.
+
+.Higher accuracy = better demand planning.
+
+Example :
+
+AtliQ e-Store: 74.22%
+
+Amazon: 73.79%
+
+✔ Indicates how well the company predicted the actual sales.
+
+ Forecast Accuracy % LY-
+
+.Shows last year’s forecast accuracy for comparison.
+
+.Helps understand improvement or decline.
+
+Example:
+
+AtliQ e-Store: 74.59% LY (slightly better last year)
+
+✔ Used to identify trends in forecast performance.
+
+Net Error-
+
+.Measures the difference between Forecast – Actual sales.
+
+.Negative = under-forecasted (actual > forecast)
+
+.Positive = over-forecasted (actual < forecast)
+
+Example:
+
+Amazon: –464,694 (large under-forecast)
+
+Acclaimed Stores: +83,037 (over-forecasting)
+
+✔ Helps detect demand planning bias.
+
+Net Error %-
+
+.Percentage form of Net Error.
+
+.Helps compare performance across customers of different sizes.
+
+Examples:
+
+BestBuy: +10.4% (over-forecast)
+
+Radio Popular: –18.6% (under-forecast)
+
+✔ High absolute % = supply chain instability.
+
+Risk Category (EI / OOS)-
+
+dashboard assigns two important risk flags:
+
+.OOS (Out-of-Stock Risk)
+
+.Negative Net Error %
+
+.Actual sales higher than forecast
+
+.Risk of lost sales, customer dissatisfaction
+
+Examples:
+
+Amazon, Flipkart, Taobao → OOS
+
+
+✅ Product-Level Insights
+
+Networking products → Highest forecast accuracy (~93%)
+
+Peripherals & Storage → High error %, unstable demand patterns
+
+Notebooks & Accessories → Over-forecasting causing EI risk
+
+
+✅ Trend Insights
+
+Net Error shows improvement post-December (process correction/seasonality).
+
+Forecast Accuracy LY showed a +1.2% improvement, indicating maturing planning process.
+
+
+2️⃣ EXECUTIVE VIEW – INSIGHTS
+
+✅ Top Level KPI Summary (As per FY 2022 Estimate)
+
+Net Sales: $3.74B
+
+Gross Margin %: 38.08%
+
+Net Profit %: –13.98%
+
+Forecast Accuracy: 81.17%
+
+
+✅ Regional Insights
+
+North America & India → Highest contribution to Net Sales.
+
+ROA & SE regions → Declining NP% due to high operational cost + lower GM%.
+
+
+✅ Market Share
+
+AtliQ’s global market share improved from 7.8% → 9.9% between 2018–2022.
+
+Competitors show gradual decline, indicating stronger brand presence.
+
+
+✅ Division-Level Insight
+
+PC Division contributes 61% of total Net Sales → strong customer loyalty & established B2B demand.
+
+🔹 Top 5 Customers by Revenue – Insights
+
+.Amazon + AtliQ Exclusive + AtliQ eStore together contribute >30% of total revenue.
+
+.AtliQ Exclusive has the highest profitability profile.
+
+.Sage and Flipkart have moderate revenue share but Flipkart offers higher margin efficiency.
+
+.GM% shows early signs of margin pressure for Amazon & eStore — needs pricing review.
+
+🔹 Top 5 Products by Revenue – Insights
+
+.Allin1 series (Gen1 + Gen2) forms the strongest product family both in revenue & margin contribution.
+
+.Smash series is selling well but shows declining GM%, indicating component cost inflation.
+
+.Product mix shows a clear shift toward All-in-One devices, indicating rising demand in hybrid work setups.
+
+
+
+3️⃣ MARKETING VIEW – INSIGHTS
+
+✅ Customer Performance
+
+Amazon, AtliQ Exclusive & A1 Stores → top contributors in Net Sales & GM%.
+
+Mid-tier customers show declining GM%, indicating discount dependence or competitor pressure.
+
+
+✅ Product Insights
+
+Notebook Category → Highest Gross Margin contribution (~600M).
+
+Networking → Consistently highest GM% (~38%).
+
+Accessories → Low revenue + low margin → needs pricing or assortment review.
+
+
+✅ Market Dynamics
+
+EU & APAC regions → strong profitability due to higher product mix quality.
+
+LATAM → low revenue + high demand volatility → needs marketing intervention.
+
+
+4️⃣ SALES VIEW – INSIGHTS
+
+✅ Unit Economics
+
+Gross Margin: 61.92%
+
+COGS: 38.08%
+
+OPEX pushing Net Profit into negative territory.
+
+✅ GM% vs NP%
+
+Product margins are healthy, but:
+
+High freight cost
+
+Excessive promotional spend
+
+Operational overhead
+are cutting profitability.
+
+✅ Category-Level Insight
+
+Desktop & Notebook = High sales volume
+
+Networking = Highest GM%
+
+Storage & Peripherals = GM pressure + high costing
+
+
+5️⃣ FINANCE VIEW – INSIGHTS
+
+✅ Revenue Trends
+
+Net Sales show a steady rise from Sept–Dec (seasonal push).
+
+After January, slight decline due to:
+
+Inventory correction
+
+Lower customer orders
+
+Post-holiday slowdown
+
+
+✅ P&L Highlights
+
+Gross Sales: 7.37B
+
+Net Sales: 3.73B
+
+Total COGS: 2.31B
+
+Net Profit: –522M
+
+Why Negative NP?
+
+Due to high advertising, freight, and operational costs, despite stable GM%.
+
+
+✅ Top vs Bottom Performance
+
+Top: Notebook (best P&L value)
+
+Bottom: Accessories (low volume + low GM%)
+
+
+✅ Regional Performance
+
+APAC leads in NS$ & P&L growth due to strong Notebook + Networking demand.
+
+⭐ OVERALL BUSINESS INSIGHT
+
+AtliQ is experiencing strong revenue growth and market share expansion, supported by demand in PC, Notebook, Networking categories and strong regions like NA, India & APAC.
+
+However, profitability remains a challenge due to:
+
+High operational expense
+
+Forecast accuracy gaps
+
+Regional demand volatility
+
+High COGS in non-core categories
+
+Weak mid-tier customer profitability
+
+📌 Recommended Strategic Focus
+
+Improve forecasting for Storage & Peripheral categories.
+
+Optimize operational expenses to improve NP%.
+
+Customer profitability analysis for mid-tier markets.
+
+Region-specific pricing strategies, especially LATAM & SE.
+
+Shift marketing investment to high GM products (Networking, Notebook).
+
