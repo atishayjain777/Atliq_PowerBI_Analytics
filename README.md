@@ -45,6 +45,9 @@ The goal was to build an enterprise-grade BI system that enables AtliQ’s leade
 - Clean relationships, no circular dependencies.
 - Optimal cross-filtering (single direction).
 - Validated keys: Customer, Product, Market, Date.
+  
+For View data Model-
+(https://github.com/atishayjain777/Atliq_PowerBI_Analytics/blob/main/Atisahy_Atliq_model_View.png)
 
 ### 📂 Repository Structure
 
@@ -104,6 +107,9 @@ A high-level summary for CXO & VP-level stakeholders:
 - Revenue Distribution by Division & Channel
 - Top 5 Customers & Products by Revenue
 - Yearly Trend Analysis (NS$, GM%, NP%)
+  
+  For View **Executive View Dashboard**
+  (https://github.com/atishayjain777/Atliq_PowerBI_Analytics/blob/main/Atisahy_Atliq_Executive_View_Dashboard.pdf)
 
 ### 2️⃣ **Sales View Dashboard**
 Focused on customer performance & product-level sales:
@@ -114,6 +120,9 @@ Focused on customer performance & product-level sales:
 - Customer Performance Matrix (GM% vs NS$)
 - Product GM% & Profitability Drivers
 
+  ** Foe View Sales View Dashboard**
+  (https://github.com/atishayjain777/Atliq_PowerBI_Analytics/blob/main/Atisahy_Atliq_Sales_View_Dashboard.pdf)
+
 ### 3️⃣ **Marketing View Dashboard**
 Evaluating market segmentation & brand strength:
 
@@ -121,6 +130,9 @@ Evaluating market segmentation & brand strength:
 - Customer penetration analysis
 - Sub-Zone insights (NS%, GM%, NP%)
 - Brand performance vs competitors
+
+   ** For View Marketing View Dashboard**
+  (https://github.com/atishayjain777/Atliq_PowerBI_Analytics/blob/main/Atisahy_Atliq_Market_View_Dashboard.pdf)
 
 ### 4️⃣ **Supply Chain View Dashboard**
 End-to-end forecast accuracy & risk assessment:
@@ -130,6 +142,9 @@ End-to-end forecast accuracy & risk assessment:
 - Accuracy & Net Error Trend
 - Customer/Product Risk Flags (EI / OOS)
 - Supply chain reliability KPIs
+
+  ** For View Supply Chain View Dashboard**
+  (https://github.com/atishayjain777/Atliq_PowerBI_Analytics/blob/main/Atisahy_Atliq_Supply_Chain_View_Dashboard.pd)
 
 ### 5️⃣ **Finance View Dashboard**
 Full financial transparency including:
@@ -141,7 +156,8 @@ Full financial transparency including:
 - Region / Customer / Product financials  
 - Unit Economics Dashboard
 
----
+** For View Finance View Dashboard**
+---(https://github.com/atishayjain777/Atliq_PowerBI_Analytics/blob/main/Atisahy_Atliq_Financial_View_Dashboard.pdf)
 
 #📊 DAX Measures (Key Highlights)
 
@@ -232,7 +248,44 @@ Fully dynamic P&L table:
 - Power BI Sevice
 - GitHub for version control
 
----
+## 🧾 Business Insights  
+
+1. Customer Insights
+
+Identified top-performing customers contributing the majority of revenue.
+
+Found low-engagement customers with declining purchases for targeted remarketing.
+
+Customer segments show repeat buyers driving higher profitability compared to one-time buyers.
+
+2. Product Insights
+
+High revenue driven by top 5 best-selling products while a few products lead to negative margins.
+
+Found seasonal sales trends, helping plan inventory better.
+
+3. Sales & Business Insights
+
+Achieved YoY revenue growth with strong performance in specific regions.
+
+Identified underperforming markets needing promotional strategy.
+
+Clear gap between actual sales vs target, showing areas for improvement.
+
+4. Profitability Insights
+
+Some categories generate high revenue but low profit, suggesting cost optimization.
+
+Highest profitability comes from repeat customers + high-margin products.
+
+5. Operational Insights
+
+Sales cycle shows month-end spikes, indicating customer buying behavior.
+
+Return/Refund cases impact 2–4% of revenue, requiring quality checks.
+
+---🧾 To Know More Business Insights Raed Text file
+(https://github.com/atishayjain777/Atliq_PowerBI_Analytics/blob/main/%F0%9F%93%84Atishay%20_INSIGHTS%20_AtliQ_Hrdware_Business%20Intell.txt)
 
 ## 🧾 Business Impact
 
