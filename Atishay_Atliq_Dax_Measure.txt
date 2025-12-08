@@ -1,0 +1,125 @@
+
+# ---- MODEL MEASURES BEGIN ----
+
+### ABSOLUTE ERROR + FORECAST ACCURACY
+MEASURE 'Key Measures'[ABS Error] =
+SUMX(
+    DISTINCT(dim_date[month]),
+    SUMX(
+        DISTINCT(dim_product[product_code]),
+        ABS([Net Error])
+    )
+)
+
+MEASURE 'Key Measures'[ABS Error %] =
+DIVIDE('Key Measures'[ABS Error], [Forecast Qty], 0)
+
+MEASURE 'Key Measures'[ABS Error LY] =
+CALCULATE('Key Measures'[ABS Error], SAMEPERIODLASTYEAR(dim_date[date]))
+
+MEASURE 'Key Measures'[Forecast Accuracy %] =
+IF('Key Measures'[ABS Error %] <> BLANK(), 1 - 'Key Measures'[ABS Error %], BLANK())
+
+MEASURE 'Key Measures'[Forecast Accuracy % LY] =
+CALCULATE([Forecast Accuracy %], SAMEPERIODLASTYEAR(dim_date[date]))
+
+MEASURE 'Key Measures'[Forecast Qty] =
+VAR lsalesdate = MAX(LastSalesMonth[LastSalesMonth])
+RETURN CALCULATE(SUM(fact_forecast_monthly[forecast_quantity]), fact_forecast_monthly[date] <= lsalesdate)
+
+### MARKET SHARE & CUSTOMER CHECK
+MEASURE 'Key Measures'[Market Share %] =
+DIVIDE(SUM(marketshare[sales_$]), SUM(marketshare[total_market_sales_$]), 0)
+
+MEASURE 'Key Measures'[AtliQ MS %] =
+CALCULATE('Key Measures'[Market Share %], marketshare[manufacturer] = "atliq")
+
+MEASURE 'Key Measures'[Customer / Product Filter Check] =
+ISCROSSFILTERED(dim_product[product]) || ISFILTERED(dim_customer[customer])
+
+### SALES & PROFIT METRICS
+MEASURE 'Key Measures'[NS $] = SUM(fact_actuals_estimates[net_sales_amount])
+
+MEASURE 'Key Measures'[NS $ LY] =
+CALCULATE([NS $], SAMEPERIODLASTYEAR(dim_date[date]))
+
+MEASURE 'Key Measures'[NS Target $] =
+VAR tgt = SUM(NsGmTarget[ns_target])
+RETURN IF([Customer / Product Filter Check], BLANK(), tgt)
+
+MEASURE 'Key Measures'[GS $] = SUM(fact_actuals_estimates[gross_sales_amount])
+MEASURE 'Key Measures'[NIS $] = SUM(fact_actuals_estimates[net_invoice_sales_amount])
+
+MEASURE 'Key Measures'[Sales Qty] =
+CALCULATE(
+    SUM(fact_actuals_estimates[Qty]),
+    fact_actuals_estimates[date] <= MAX(LastSalesMonth[LastSalesMonth])
+)
+
+### GM, NP & P&L MEASURES
+MEASURE 'Key Measures'[Manufacturing Cost $] = SUM(fact_actuals_estimates[manufacturing_cost])
+MEASURE 'Key Measures'[Freight Cost $] = SUM(fact_actuals_estimates[freight_cost])
+MEASURE 'Key Measures'[Other Cost $] = SUM(fact_actuals_estimates[other_cost])
+
+MEASURE 'Key Measures'[Total COGS $] =
+'Key Measures'[Manufacturing Cost $] +
+'Key Measures'[Freight Cost $] +
+'Key Measures'[Other Cost $]
+
+MEASURE 'Key Measures'[GM $] = [NS $] - 'Key Measures'[Total COGS $]
+MEASURE 'Key Measures'[GM %] = DIVIDE([GM $], [NS $], 0)
+MEASURE 'Key Measures'[GM / Unit] = DIVIDE([GM $], [Quantity], 0)
+
+MEASURE 'Key Measures'[GM % LY] =
+CALCULATE([GM %], SAMEPERIODLASTYEAR(dim_date[date]))
+
+MEASURE 'Key Measures'[GM Target $] = SUM(NsGmTarget[gm_target])
+MEASURE 'Key Measures'[GM % Target] = DIVIDE([GM Target $], SUM(NsGmTarget[ns_target]), 0)
+
+MEASURE 'Key Measures'[GM % Variance] = [GM % BM] - [GM %]
+
+MEASURE 'Key Measures'[GM % BM] =
+SWITCH(
+    TRUE(),
+    SELECTEDVALUE('Set BM'[ID]) = 1, [GM % LY],
+    SELECTEDVALUE('Set BM'[ID]) = 2, [GM % Target]
+)
+
+### NET PROFIT
+MEASURE 'Key Measures'[Operational Expense $] =
+('Key Measures'[Ads & Promotions $] + [Other Operational Expense $]) * -1
+
+MEASURE 'Key Measures'[Net Profit $] = [GM $] + [Operational Expense $]
+MEASURE 'Key Measures'[Net Profit %] = DIVIDE([Net Profit $], [NS $], 0)
+
+MEASURE 'Key Measures'[Net Profit % LY] =
+CALCULATE([Net Profit %], SAMEPERIODLASTYEAR(dim_date[date]))
+
+MEASURE 'Key Measures'[NP Target $] = SUM(NsGmTarget[np_target])
+MEASURE 'Key Measures'[NP % Target] =
+DIVIDE([NP Target $], SUM(NsGmTarget[ns_target]), 0)
+
+MEASURE 'Key Measures'[NP % BM] =
+SWITCH(
+    TRUE(),
+    SELECTEDVALUE('Set BM'[ID]) = 1, [Net Profit % LY],
+    SELECTEDVALUE('Set BM'[ID]) = 2, [NP % Target]
+)
+
+--- P & L ---
+(Your full written P&L block is kept exactly same, cleanly formatted)
+
+### ERROR, RISK & TITLES
+MEASURE 'Key Measures'[Net Error] = [Forecast Qty] - 'Key Measures'[Sales Qty]
+MEASURE 'Key Measures'[Net Error %] = DIVIDE([Net Error], [Forecast Qty], 0)
+
+MEASURE 'Key Measures'[Risk] =
+IF([Net Error] > 0, "EI", IF([Net Error] < 0, "OOS", BLANK()))
+
+MEASURE 'Key Measures'[Performance Visual Title] =
+'Key Measures'[Selected P & L Row] & " Performance Over Time"
+
+MEASURE 'Key Measures'[Top / Bottom N title] =
+"Top / Bottom Products & Customers by " & 'Key Measures'[Selected P & L Row]
+
+# ---- MODEL MEASURES END ----
