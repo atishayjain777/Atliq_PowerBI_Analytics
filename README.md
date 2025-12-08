@@ -48,14 +48,28 @@ The goal was to build an enterprise-grade BI system that enables AtliQ’s leade
 
 ### 📂 Repository Structure
 
-📁 AtliQ-Business-Insights
-│── README.md
-│── INSIGHTS.md
-│── VALIDATION.md
-│── 📁 Dashboard Screenshots
-│── 📁 Data Model
-│── 📁 DAX Measures
-│── 📁 Source Files
+📦 Atliq-PowerBI-Analytics
+│
+├── 📊 Dashboards-PDF/
+│ ├── 01_Supply_Chain_View.pdf
+│ ├── 02_Executive_View.pdf
+│ ├── 03_Marketing_View.pdf
+│ ├── 04_Sales_View.pdf
+│ ├── 05_Finance_View.pdf
+│
+├── 🧠 Data-Model/
+│ ├── data_model.png
+│
+├── 📄 DAX-Measures/
+│ ├── measures_dax.txt
+│
+├── 📘 Validation/
+│ ├── data_validation.txt
+│
+├── 📗 Insights/
+│ ├── insights.txt
+│
+└── README.md
 
 
 ---
@@ -137,9 +151,11 @@ Full financial transparency including:
 - Forecast Accuracy %  
 - Net Error  
 - ABS Error  
-- LY, FY, YTD, YTG comparisons  
 - Target Achievement %
- 
+- Ads & Promotions $
+- GM / Unit
+- GM % BM
+- 
 ➡ Full code included in `/DAX Measures/`.
 
 ---
