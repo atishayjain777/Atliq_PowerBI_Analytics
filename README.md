@@ -143,21 +143,84 @@ Full financial transparency including:
 
 ---
 
-## 📐 Key DAX Measures Used
+#📊 DAX Measures (Key Highlights)
 
-- Net Sales  
-- Gross Margin %  
-- Net Profit %  
-- Forecast Accuracy %  
-- Net Error  
-- ABS Error  
-- Target Achievement %
-- Ads & Promotions $
-- GM / Unit
-- GM % BM
-- 
+This project includes a well-organized set of DAX measures that power all analytical views such as Sales, Finance, Marketing, Executive, and Supply Chain.
+
+These measures are structured to deliver dynamic, accurate, and business-ready KPIs, covering:
+
+✔️ Forecasting & Accuracy
+
+.Net Error
+
+.Absolute Error
+
+.Forecast Accuracy %
+
+.YoY Forecast Accuracy
+
+✔️ Sales Performance
+
+.Gross Sales (GS$)
+
+.Net Sales (NS$)
+
+.Net Invoice Sales (NIS$)
+
+.Sales Quantity
+
+.YoY Net Sales
+
+✔️ Profitability & Costing
+
+.Total COGS
+
+.Gross Margin (GM$ / GM%)
+
+.Net Profit (NP$ / NP%)
+
+.Operational Expenses
+
+.YoY Profitability
+
+✔️ P&L Dynamic Engine
+
+Fully dynamic P&L table:
+
+.P&L Actual
+
+.P&L Target
+
+.P&L Benchmark
+
+.Variance & % Variance
+
+.Auto-switching “Final P&L Value”
+
+✔️ Market Share & Competitive KPIs
+
+.Total Market Share %
+
+.AtliQ Market Share %
+
+✔️ Supply Chain Risk
+
+.EI (Excess Inventory)
+
+.OOS (Out of Stock)
+
+.Net Error Classification
+
+✔️ Visual Helper Measures
+
+.Dynamic titles
+
+.Top/Bottom N title
+
+.Last data refresh footer
+
 ➡ Full code included in `/DAX Measures/`.
-
+(https://github.com/atishayjain777/Atliq_PowerBI_Analytics/blob/main/Atishay_Atliq_Dax_Measure.txt)
 ---
 
 ## 🛠️ Tools & Technologies
