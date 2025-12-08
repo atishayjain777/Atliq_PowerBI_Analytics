@@ -76,7 +76,7 @@ Key checks performed:
 
 **Conclusion:**  
 ✔ Dataset is clean, accurate, and analytics-ready.
-
+(https://github.com/atishayjain777/Atliq_PowerBI_Analytics/blob/main/%F0%9F%93%84%20Atishay_Atliq_VALIDATION.md.txt)
 ---
 
 ## 📊 Dashboards Included
