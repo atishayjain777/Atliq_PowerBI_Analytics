@@ -1,4 +1,4 @@
-# AtliQ Business Insights – Power BI Analytics Suite  
+# AtliQ-Business-360-Analytics 
 ### Enterprise Dashboard | Sales • Finance • Supply Chain • Marketing • Executive View  
 
 This repository contains the full analytics solution built for **AtliQ** using Power BI.  
