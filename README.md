@@ -7,7 +7,50 @@ performance across **Sales, Marketing, Finance, Supply Chain, and Executive KPIs
 
 The entire data model was validated end-to-end to ensure accuracy, reliability, and real-world usability.
 
----
+⭐ Business Impact Summary 
+
+This analytics suite delivered high-value business insights that directly support strategic decision-making across Supply Chain, Sales, Marketing, Executive, and Finance teams.
+
+🔹 1. Improved Forecasting Decisions
+
+Identified $6.89M ABS Error reducing operational uncertainty For FY2022 EST.
+
+Flagged high-risk customers (EI/OOS) enabling proactive stock planning.
+
+
+🔹 2. Executive-Level Financial Clarity
+
+Revealed 38.08% GM% and major NP% drop due to high OPEX FY2022 EST.
+
+Helped leadership track revenue drivers across PC, Accessories & Networking.
+
+
+🔹 3. Sales & Marketing Optimization
+
+Identified top-performing customers (Amazon, AtliQ Exclusive) FY2022 EST.
+
+Pinpointed low-performing product segments needing pricing & promo correction.
+
+
+🔹 4. Regional Profitability Analysis
+
+Highlighted APAC & NA as strongest markets.
+
+Found NP% decline in ROA & SE regions for corrective action.
+
+
+🔹 5. Financial Health & Cost Insights
+
+Clear understanding of COGS (38%) vs GM% (62%) FY2022 EST.
+
+Showed how OPEX drives AtliQ into negative profit despite strong margins FY2022 EST.
+
+🔹 6. Market Share Growth Story
+
+AtliQ gained 7.8% → 9.9% market share between 2018–2022.
+
+⭐  For Know More Business Impact Summary
+(https://github.com/atishayjain777/Atliq_PowerBI_Analytics/blob/main/%E2%9C%85%20Atishay_Atliq_Business_Impact_Summary.txt)
 
 ## 🚀 Project Overview
 
@@ -69,8 +112,9 @@ For View data Model-
 ├── 📘 Validation/
 │ ├── data_validation.txt
 │
-├── 📗 Insights/
+├── 📗 Insights/Business Impact
 │ ├── insights.txt
+  ├──Business_Impact.txt
 │
 └── README.md
 
